@@ -1,3 +1,7 @@
+:root {
+    --main-card-w: 320px;
+    --main-card-h: 160px;
+}
 body {
     margin: 0;
     padding: 0;
@@ -15,22 +19,46 @@ div.sidebar {
 }
 
 main {
-    background-color: rgb(116, 119, 122);
+    background-color: #E2E8F0;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
 }
 
 /* Project / Card Section */
 
 section.projects {
-    display: grid;
-    grid-template: 200px 200px 200px / 300px 300px 300px;
+    display: inline-grid;
+    
+    grid-template-columns: repeat(2, var(--main-card-w));
+    grid-template-rows: auto-fit repeat(3, var(--main-card-h));
+    gap: 20px;
+    padding: 20px;
+    padding-left: 20px;
 }
+
+section.announcements-trending {
+    display: inline-grid;
+
+    grid-template-columns: var(--main-card-h);
+    grid-template-rows: auto-fit calc(1.5*var(--main-card-h)) auto-fit calc(1.5*var(--main-card-h));
+}
+
 article.card {
     background-color: white;
 
     padding: 40px 20px 40px 20px;
 
     border-radius: 10px;
-    border-left: solid orange 10px;
+    border-left: solid #F0B429 10px;
+
+    
+}
+
+h2.main-heading {
+    grid-column: 1 / span 2;
 }
 
 article.card > h3 {
@@ -39,6 +67,7 @@ article.card > h3 {
 article.card > p {
     color: gray;
     margin-top: 0;
+    height: 3rem;
 }
 
 div.card-controls > button {
@@ -50,6 +79,10 @@ div.card-controls {
     float: right;
     
     bottom: 0;
+}
+
+.with-heading {
+    padding-left: 20px; 
 }
 
 /* End */
