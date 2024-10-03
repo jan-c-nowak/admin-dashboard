@@ -1,6 +1,7 @@
 :root {
     --main-card-w: 320px;
     --main-card-h: 160px;
+    font-size: 12px;
 }
 body {
     /* Reset */
@@ -10,13 +11,39 @@ body {
 
     /* Main Grid */
     display: grid;
-    grid-template: 15vh 85vh / 15vw 85vw;
+    grid-template: 15vh 85vh / 18vw 82vw;
 }
 
 div.sidebar {
     grid-row-start: 1;
     grid-row-end: 3;
-    background-color: aliceblue;
+    background-color: #1992D4;
+    color: #FFFFFF;
+}
+
+nav.sidebar-nav {
+    height: 100%;
+}
+
+ul.nav-ul {
+    height: 80%;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+
+    list-style: none;
+}
+
+ul.nav-ul li > img {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    /* display: inline; */
+}
+
+ul.nav-ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 main {
