@@ -11,7 +11,7 @@ body {
 
     /* Main Grid */
     display: grid;
-    grid-template: 15vh 85vh / 18vw 82vw;
+    grid-template: 25vh 75vh / 18vw 82vw;
 }
 
 div.sidebar {
@@ -52,7 +52,6 @@ ul.nav-ul li img {
     height: 20px;
     /* display: inline; */
     margin-left:20px;
-    color: red;
 }
 
 ul.nav-ul a {
@@ -76,10 +75,66 @@ main {
     gap: 20px;
 }
 
+
+/* 
+    HEADER Start 
+*/
+
+/* STRUCTURE */
+
 header {
     display: grid;
+    grid-template-rows: 1fr 2fr;
+}
 
-    grid-template: 1fr 2fr / 1;
+header div.flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div.flex-group {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+}
+
+header div.grid-hello-there {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+header section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+
+
+img.avatar {
+    border-radius: 50%;
+}
+
+img.av-big {
+    grid-row: 1 / 3;
+}
+
+header input[type="text"] {
+    width: 600px;
+    height: 30px;
+    border-radius: 30px;
+    padding-left:10px;
+}
+
+header img {
+    width: 25px;
+    height: 25px;
 }
 
 h2 {
